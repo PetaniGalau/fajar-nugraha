@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LONTARA TECH — LAYOUT ENGINE
+   FAJAR NUGRAHA — LAYOUT ENGINE
    Lokasi: css/layout.css
    Fungsi: Struktur Navigasi, Header, Footer, & Tata Letak Dasar SPA
    ========================================================================== */
@@ -8,18 +8,19 @@
 .container {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 2rem; /* Ruang napas kiri-kanan agar tidak mepet layar */
+  padding: 0 2rem;
   width: 100%;
 }
 
 /* Area Injeksi Konten SPA */
 #render-konten {
   flex: 1;
-  padding-top: var(--header-height); /* Mencegah konten tertusuk navbar */
+  padding-top: calc(
+    var(--header-height) + 20px
+  ); /* Tambah ruang agar tidak tertutup navbar mengambang */
   min-height: 90vh;
   display: flex;
   flex-direction: column;
-  /* Animasi masuk setiap kali halaman baru dimuat oleh app-shell */
   animation: fadeInSPA 0.4s ease-in-out;
 }
 
@@ -34,34 +35,39 @@
   }
 }
 
-/* --- 2. HEADER ARCHITECTURE (Glassmorphism) --- */
+/* --- 2. HEADER ARCHITECTURE (GLASSMORPHISM & FLOATING) --- */
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 20px; /* Jarak dari atas untuk efek mengambang */
+  left: 50%;
+  transform: translateX(-50%); /* Sentralisasi header */
+  width: 90%; /* Lebar tidak penuh agar mengambang */
+  max-width: var(--container);
   height: var(--header-height);
   background: var(--bg-glass);
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
-  border-bottom: 1px solid var(--border);
+  border-radius: 50px; /* Bentuk Kapsul/Radial */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan lembut mengambang */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: var(--z-header);
   display: flex;
   align-items: center;
   transition: var(--transition);
+  padding: 0 1rem;
 }
 
-/* State saat di-scroll ke bawah (Shrink Mode) */
 .header.shrink {
   height: 70px;
   background: var(--bg-light);
   box-shadow: var(--shadow-md);
+  top: 10px; /* Lebih mepet saat shrink */
 }
 
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Menjaga Logo di kiri, Menu di kanan */
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -69,79 +75,105 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* Jarak lega antar kelompok navigasi */
+  gap: 2rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.8rem;
+  gap: 1.5rem;
   list-style: none;
   align-items: center;
 }
 
 .nav-links a {
-  font-weight: 700;
+  font-weight: 600; /* Sedikit lebih tipis */
   font-size: 0.95rem;
   color: var(--text-main);
   text-decoration: none !important;
   position: relative;
   padding: 0.5rem 0;
   transition: color 0.3s ease;
-
-  /* FIX: Memastikan teks menu (seperti "Aset Digital") sejajar 1 baris */
   white-space: nowrap;
   display: inline-block;
   text-align: center;
 }
 
-/* Active & Hover Logic */
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--accent) !important;
 }
 
-/* SISTEM UNDERLINE: Garis bawah elegan untuk menu aktif */
+/* Garis bawah animasi dot (Bulat/Radial kecil) */
 .nav-links a::after {
   content: "";
   position: absolute;
-  bottom: -2px;
-  left: 0;
+  bottom: -4px;
+  left: 50%;
   width: 0;
-  height: 2px;
+  height: 4px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  border-radius: 50%; /* Bulat */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateX(-50%);
 }
 
 .nav-links a.active::after {
-  width: 100%; /* Tetap menyala berkat sinkronisasi main.js */
+  width: 4px; /* Titik kecil aktif */
 }
 
-/* --- 4. CONTROLS (SEARCH, THEME, & CTA) --- */
+/* --- 4. CONTROLS (RADIAL/PILL SHAPE ENGINE) --- */
 .nav-controls {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  padding-left: 1.5rem;
-  border-left: 1px solid var(--border); /* Pemisah visual yang tegas */
+  gap: 0.8rem; /* Jarak rapat agar menyatu */
+  padding-left: 1rem;
+  border-left: none; /* Hilangkan garis batas */
 }
 
+/* Tombol Tema */
 .theme-btn {
-  background: transparent;
-  border: none;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
   color: var(--text-main);
   cursor: pointer;
-  font-size: 1.15rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Bulat Sempurna */
+  transition: all 0.3s ease;
 }
 
 .theme-btn:hover {
-  transform: rotate(15deg) scale(1.1);
+  background: var(--accent-soft);
   color: var(--accent);
+  transform: rotate(15deg);
+  border-color: var(--accent);
 }
 
-/* Search Engine Interaction */
+/* Tombol CTA (Pill Shape) */
+.nav-cta {
+  background-color: var(--primary) !important;
+  color: white !important;
+  padding: 0.6rem 1.6rem;
+  border-radius: 50px; /* BENTUK KAPSUL */
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+}
+
+.nav-cta:hover {
+  background-color: var(--primary-light) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Search Box (Pill Shape) */
 #search-form {
   position: relative;
   display: flex;
@@ -149,59 +181,45 @@
 }
 
 .search-input {
-  padding: 8px 35px 8px 15px;
+  padding: 9px 38px 9px 18px;
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 50px; /* BENTUK KAPSUL */
   background: var(--bg-main);
   font-size: 0.85rem;
   color: var(--text-main);
-  width: 160px;
+  width: 170px;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .search-input:focus {
-  width: 220px; /* Melebar saat diklik */
+  width: 230px;
   outline: none;
+  background: var(--bg-light);
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
+  box-shadow: 0 4px 15px var(--accent-soft);
 }
 
 .search-submit {
   position: absolute;
-  right: 12px;
+  right: 13px;
   background: none;
   border: none;
   color: var(--text-muted);
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: color 0.3s;
 }
 
-/* TOMBOL KONTAK (CTA UTAMA NAVBAR) */
-.nav-cta {
-  background-color: var(--primary) !important;
-  color: white !important;
-  padding: 0.7rem 1.6rem;
-  border-radius: var(--radius-sm, 10px);
-  font-weight: 800;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  white-space: nowrap; /* Biar tombolnya gak gepeng */
-}
-
-.nav-cta:hover {
-  background-color: var(--accent) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px var(--accent-soft);
+.search-input:focus + .search-submit {
+  color: var(--accent);
 }
 
 /* --- 5. MOBILE NAVIGATION ENGINE --- */
 .nav-toggle {
   display: none;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -209,22 +227,22 @@
 }
 
 .nav-toggle span {
-  width: 28px;
+  width: 26px;
   height: 2px;
   background: var(--text-main);
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
 }
 
-/* Animasi Burger ke X */
 .nav-toggle.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 .nav-toggle.active span:nth-child(2) {
   opacity: 0;
   transform: translateX(-15px);
 }
 .nav-toggle.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .nav-overlay {
@@ -243,7 +261,6 @@
   visibility: visible;
 }
 
-/* Mobile Breakpoint */
 @media (max-width: 1024px) {
   .nav-toggle {
     display: flex;
@@ -252,14 +269,15 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 320px;
+    width: 300px;
     height: 100vh;
     background: var(--bg-light);
     flex-direction: column;
-    padding: 100px 2rem;
-    gap: 2.5rem;
+    padding: 90px 2rem;
+    gap: 2rem;
     box-shadow: -15px 0 40px rgba(0, 0, 0, 0.1);
     transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 30px 0 0 30px;
   }
   .nav.active {
     right: 0;
@@ -274,10 +292,13 @@
     align-items: center;
   }
   .nav-links {
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
   .nav-links a {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+  }
+  .nav-controls {
+    gap: 1.2rem;
   }
 }
 
@@ -287,30 +308,4 @@
   border-top: 1px solid var(--border);
   padding: 4rem 0 2rem;
   margin-top: auto;
-}
-
-.footer-split {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.footer-brand p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-top: 0.5rem;
-}
-.footer-copyright p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .footer-split {
-    flex-direction: column;
-    text-align: center;
-  }
 }
