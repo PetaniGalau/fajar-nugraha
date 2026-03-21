@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LONTARA — Environmental & Land Intelligence Studio</title>
+
+    <title>Fajar Nugraha — GIS Specialist & Web Developer</title>
 
     <link rel="icon" type="image/png" href="aset/logo/favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -36,7 +37,7 @@
             <img
               id="main-logo"
               src="aset/logo/logo-hitam.png"
-              alt="LONTARA Logo"
+              alt="Fajar Nugraha Logo"
               style="height: 40px; width: auto"
             />
           </a>
@@ -44,11 +45,6 @@
 
         <nav class="nav" id="main-nav">
           <ul class="nav-links">
-            <!-- <li>
-              <a href="sumber-konten/layanan/layanan.html" class="nav-link-ajax"
-                >Layanan</a
-              >
-            </li> -->
             <li>
               <a
                 href="sumber-konten/portofolio/portofolio.html"
@@ -68,16 +64,9 @@
                 >Publikasi</a
               >
             </li>
-            <!-- <li>
-              <a
-                href="sumber-konten/aset-digital/aset-digital.html"
-                class="nav-link-ajax"
-                >Aset Digital</a
-              >
-            </li> -->
             <li>
               <a href="sumber-konten/tentang/tentang.html" class="nav-link-ajax"
-                >Tentang</a
+                >Tentang Saya</a
               >
             </li>
           </ul>
@@ -92,24 +81,24 @@
               <i class="fa-solid fa-moon"></i>
             </button>
 
+            <a
+              href="sumber-konten/kontak/kontak.html"
+              class="nav-link-ajax nav-cta"
+              >Mari Berdiskusi</a
+            >
+
             <form id="search-form" action="#">
               <input
                 type="text"
                 id="search-input"
                 class="search-input"
-                placeholder="Cari data spasial..."
+                placeholder="Cari proyek atau skill..."
                 autocomplete="off"
               />
               <button type="submit" class="search-submit" aria-label="Cari">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
-
-            <a
-              href="sumber-konten/kontak/kontak.html"
-              class="nav-link-ajax nav-cta"
-              >Kontak</a
-            >
           </div>
         </nav>
 
@@ -136,25 +125,64 @@
       >
         <div class="spinner"></div>
         <p style="margin-top: 1rem; color: var(--text-muted); font-weight: 600">
-          Memuat Lontara Engine...
+          Memuat Ruang Kerja Fajar...
         </p>
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-split">
-        <div class="footer-brand">
-          <img
-            src="aset/logo/logo-footer.png"
-            alt="Lontara"
-            style="height: 30px; margin-bottom: 10px; opacity: 0.8"
-            onerror="this.style.display = 'none'"
-          />
-          <h4 style="color: var(--primary)">Lontara</h4>
-          <p>Environmental & Land Intelligence Studio.</p>
+    <footer class="footer text-center">
+      <div
+        class="container"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+        "
+      >
+        <div
+          class="footer-brand"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <h3
+            style="
+              color: var(--primary);
+              font-size: 1.8rem;
+              margin-bottom: 0.5rem;
+            "
+          >
+            Fajar Nugraha
+          </h3>
+          <p style="max-width: 400px; color: var(--text-muted)">
+            Menghubungkan data spasial, pengembangan web, dan teknologi IoT
+            untuk menciptakan solusi berdampak.
+          </p>
         </div>
+
+        <div
+          class="footer-social"
+          style="
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+          "
+        >
+          <a href="#" aria-label="LinkedIn" style="color: inherit"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="#" aria-label="GitHub" style="color: inherit"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#" aria-label="Instagram" style="color: inherit"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+
         <div class="footer-copyright">
-          <p>&copy; 2026 Lontara Tech. Seluruh Hak Cipta Dilindungi.</p>
+          <p style="margin: 0; font-size: 0.9rem; font-weight: 600">
+            &copy; 2026 Fajar Nugraha. Crafted with passion.
+          </p>
         </div>
       </div>
     </footer>
