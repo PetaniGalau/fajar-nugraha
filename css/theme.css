@@ -1,16 +1,19 @@
 /* ==========================================================================
-   LONTARA TECH — THEME & GLOBAL VARIABLES
+   FAJAR NUGRAHA — THEME & GLOBAL VARIABLES
    Lokasi: css/theme.css
-   Fungsi: Identitas Brand, Mode Gelap/Terang, dan Reset Global SPA
+   Fungsi: Identitas Personal, Mode Gelap/Terang, Tipografi, & Reset Global SPA
    ========================================================================== */
 
+/* --- GOOGLE FONTS IMPORT (Outfit untuk Judul, Inter untuk Teks) --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800&display=swap");
+
 :root {
-  /* --- 1. BRAND COLORS (Environmental Intelligence) --- */
-  --primary: #1b4332; /* Forest Green - Warna Utama */
-  --primary-light: #00b8a9; /* Hijau Daun - Untuk Hover */
-  --accent: #1b4332; /* Tech Teal - Warna Aksen/Teknologi */
-  --accent-soft: rgba(0, 184, 169, 0.12);
-  --accent-glow: rgba(0, 184, 169, 0.4);
+  /* --- 1. BRAND COLORS (Professional Tech Portfolio) --- */
+  --primary: #1e3a8a; /* Deep Blue - Warna Utama (Kesan profesional & analitis) */
+  --primary-light: #3b82f6; /* Bright Blue - Untuk Hover */
+  --accent: #0ea5e9; /* Sky Blue - Warna Aksen/Teknologi yang modern */
+  --accent-soft: rgba(14, 165, 233, 0.12);
+  --accent-glow: rgba(14, 165, 233, 0.4);
 
   /* --- 2. LIGHT MODE PALETTE (Default) --- */
   --bg-main: #f8fafc; /* Slate 50 - Latar Belakang Utama */
@@ -47,10 +50,11 @@
 /* --- 5. DARK MODE OVERRIDE --- */
 /* Aktif ketika class .dark-theme ditambahkan ke tag <body> via JS */
 body.dark-theme {
-  /* --- 1. BRAND COLORS (Environmental Intelligence) --- */
-  --primary: #00b8a9; /* Forest Green - Warna Utama */
-  --primary-light: #1b4332; /* Hijau Daun - Untuk Hover */
-  --accent: #00b8a9; /* Tech Teal - Warna Aksen/Teknologi */
+  /* --- 1. BRAND COLORS (Professional Tech Portfolio) --- */
+  --primary: #0ea5e9; /* Sky Blue - Menyala di mode gelap */
+  --primary-light: #38bdf8; /* Lighter Blue - Untuk Hover */
+  --accent: #38bdf8; /* Lighter Blue - Warna Aksen */
+
   --bg-main: #020617; /* Slate 950 - Latar Pekat Mode Gelap */
   --bg-light: #0f172a; /* Slate 900 - Latar Kartu Mode Gelap */
   --bg-glass: rgba(2, 6, 23, 0.85);
@@ -59,7 +63,7 @@ body.dark-theme {
   --text-muted: #94a3b8; /* Slate 400 - Teks Sekunder Terang */
 
   --border: #1e293b; /* Slate 800 - Garis pembatas gelap */
-  --accent-soft: rgba(0, 184, 169, 0.2);
+  --accent-soft: rgba(14, 165, 233, 0.2);
 }
 
 /* ==========================================================================
@@ -80,7 +84,8 @@ html {
 }
 
 body {
-  font-family: "Manrope", "Plus Jakarta Sans", sans-serif;
+  font-family:
+    "Inter", sans-serif; /* Teks paragraf yang bersih dan keterbacaan tinggi */
   background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
@@ -98,6 +103,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Outfit", sans-serif; /* Judul yang modern dan tegas */
   color: var(--text-main);
   font-weight: 800;
   line-height: 1.2;
