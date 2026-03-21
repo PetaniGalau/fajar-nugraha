@@ -1,0 +1,554 @@
+<style>
+  .hero-image .container-relative {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 360px; /* Ukuran dioptimalkan agar proporsional */
+    aspect-ratio: 4/5;
+    margin-top: 15px;
+  }
+
+  .hero-image .stack-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border: 4px solid white; /* Frame kartu yang lebih tegas */
+    background: white;
+
+    /* Durasi total 9 detik (3 detik per gambar) */
+    animation: aestheticCardSwap 9s infinite ease-in-out;
+    will-change: transform, z-index;
+  }
+
+  .hero-image .slide-1 {
+    animation-delay: 0s;
+  }
+  .hero-image .slide-2 {
+    animation-delay: -3s;
+  }
+  .hero-image .slide-3 {
+    animation-delay: -6s;
+  }
+
+  /* CHOREOGRAPHY ANIMASI YANG LEBIH RAPAT */
+  @keyframes aestheticCardSwap {
+    /* 1. POSISI PALING DEPAN (Tegak lurus, ukuran penuh) */
+    0%,
+    25% {
+      z-index: 3;
+      transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+    }
+
+    /* 2. SWIPE KANAN (Hanya bergeser secukupnya untuk keluar dari tumpukan depan) */
+    30% {
+      z-index: 3;
+      transform: translateX(65%) translateY(5px) scale(0.95) rotate(6deg);
+    }
+
+    /* 3. MENYELIP KE PALING BELAKANG (Mengecil & agak miring ke kiri) */
+    35%,
+    60% {
+      z-index: 1;
+      transform: translateX(-10px) translateY(15px) scale(0.85) rotate(-4deg);
+    }
+
+    /* 4. MAJU KE POSISI TENGAH (Sedikit membesar & miring ke kanan) */
+    65%,
+    95% {
+      z-index: 2;
+      transform: translateX(5px) translateY(8px) scale(0.92) rotate(2deg);
+    }
+
+    /* KEMBALI KE DEPAN */
+    100% {
+      z-index: 3;
+      transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+    }
+  }
+</style>
+
+<section
+  class="hero reveal-init"
+  style="padding-top: 80px; padding-bottom: 60px"
+>
+  <div class="container">
+    <div class="grid-2" style="align-items: center; gap: 50px">
+      <div class="hero-content" style="text-align: left">
+        <span
+          style="
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+          "
+        >
+          Fajar Nugraha, M.Si.
+        </span>
+        <h1 style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px">
+          Mengintegrasikan Sains Lahan & Rekayasa Geospasial
+        </h1>
+        <p
+          style="
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+          "
+        >
+          Saya seorang Soil Scientist dan WebGIS Developer yang berfokus pada
+          perancangan infrastruktur data spasial, pemodelan lingkungan
+          prediktif, dan otomatisasi analisis untuk mendukung pengambilan
+          keputusan yang presisi.
+        </p>
+        <div
+          class="hero-buttons"
+          style="display: flex; gap: 15px; flex-wrap: wrap"
+        >
+          <a
+            href="aset\dokumen\CV Fajar Nugraha - indo.pdf"
+            target="_blank"
+            class="btn-primary"
+            style="display: inline-flex; align-items: center; gap: 8px"
+          >
+            <i class="fa-solid fa-download"></i> Unduh CV (ID)
+          </a>
+          <a
+            href="aset\dokumen\CV Fajar Nugraha - eng.pdf"
+            target="_blank"
+            class="btn-primary"
+            style="display: inline-flex; align-items: center; gap: 8px"
+          >
+            <i class="fa-solid fa-download"></i> Unduh CV (EN)
+          </a>
+          <a
+            href="sumber-konten/portofolio/portofolio.html"
+            class="nav-link-ajax btn-secondary"
+          >
+            Lihat Portofolio
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image reveal-init" style="text-align: center">
+        <div class="container-relative">
+          <div
+            style="
+              position: absolute;
+              inset: -10px;
+              background: var(--primary);
+              opacity: 0.1;
+              border-radius: 25px;
+              z-index: 0;
+              transform: rotate(-4deg);
+            "
+          ></div>
+
+          <img
+            class="stack-card slide-1"
+            src="aset/images/foto-pribadi.jpeg"
+            alt="Fajar Nugraha - WebGIS Project"
+          />
+          <img
+            class="stack-card slide-2"
+            src="aset/images/foto-pribadi-2.JPG"
+            alt="Fajar Nugraha - Wisuda IPB M.Si"
+          />
+          <img
+            class="stack-card slide-3"
+            src="aset/images/foto-pribadi-3.jpg"
+            alt="Fajar Nugraha - Python GIS Data Automation"
+            onerror="this.src = 'aset/images/foto-pribadi.jpeg'"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div
+  style="
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 30px 0;
+  "
+>
+  <div
+    style="
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 0;
+    "
+  >
+    <div class="container">
+      <div class="grid-4 align-start">
+        <div
+          class="card reveal-init"
+          style="
+            text-align: center;
+            padding: 2rem 1.5rem;
+            transition-delay: 0.1s;
+          "
+        >
+          <i
+            class="fa-solid fa-graduation-cap"
+            style="
+              font-size: 2.5rem;
+              color: var(--primary);
+              margin-bottom: 15px;
+            "
+          ></i>
+          <h4 style="margin-bottom: 15px">Pendidikan</h4>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              justify-content: center;
+            "
+          >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >Universitas Hasanuddin</span
+            >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >Institut Pertanian Bogor</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="card reveal-init"
+          style="
+            text-align: center;
+            padding: 2rem 1.5rem;
+            transition-delay: 0.2s;
+          "
+        >
+          <i
+            class="fa-solid fa-book-bookmark"
+            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px"
+          ></i>
+          <h4 style="margin-bottom: 15px">Publikasi</h4>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              justify-content: center;
+            "
+          >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >MGI (Sinta 2)</span
+            >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >JPPDAS (Sinta 2)</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="card reveal-init"
+          style="
+            text-align: center;
+            padding: 2rem 1.5rem;
+            transition-delay: 0.3s;
+          "
+        >
+          <i
+            class="fa-solid fa-laptop-code"
+            style="
+              font-size: 2.5rem;
+              color: var(--primary);
+              margin-bottom: 15px;
+            "
+          ></i>
+          <h4 style="margin-bottom: 15px">Fokus Teknologi</h4>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              justify-content: center;
+            "
+          >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >WebGIS</span
+            >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >Machine Learning</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="card reveal-init"
+          style="
+            text-align: center;
+            padding: 2rem 1.5rem;
+            transition-delay: 0.4s;
+          "
+        >
+          <i
+            class="fa-solid fa-briefcase"
+            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px"
+          ></i>
+          <h4 style="margin-bottom: 15px">Pengalaman Ahli</h4>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              justify-content: center;
+            "
+          >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >Kerentanan BNPB</span
+            >
+            <span
+              style="
+                background: var(--bg-main);
+                border: 1px solid var(--border);
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                font-weight: 600;
+              "
+              >SIDIK KLHK</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section webgis-section reveal-init" style="padding-top: 80px">
+  <div class="container">
+    <div class="webgis-section-header">
+      <h2 class="section-title">Showcase: WebGIS Interaktif</h2>
+      <p class="section-subtitle">
+        Live Preview: Integrasi data spasial Sub DAS Tanralili hasil riset
+        mandiri saya. Silakan gunakan fitur interaktif di bawah ini untuk
+        menganalisis atribut tutupan lahan dan geologi secara langsung.
+      </p>
+    </div>
+
+    <div class="webgis-container">
+      <iframe
+        src="sumber-konten/portofolio/proyek-1-webgis/app.html"
+        class="webgis-iframe"
+        title="WebGIS Sub DAS Tanralili"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <p class="webgis-hint" style="text-align: center; margin-top: 15px">
+      <i class="fa-solid fa-circle-info text-accent"></i>
+      * Klik pada poligon peta untuk memunculkan panel informasi atribut di sisi
+      kiri layar.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="background-color: var(--bg-main)">
+  <div class="container">
+    <div class="section-header reveal-init">
+      <h2 class="section-title">Keahlian Teknis</h2>
+      <p class="section-subtitle">
+        Kombinasi kompetensi akademis dan teknologi mutakhir yang saya kuasai
+        untuk menjawab tantangan manajemen lahan.
+      </p>
+    </div>
+
+    <div class="grid-4">
+      <div class="card reveal-init">
+        <div class="card-icon">
+          <i class="fa-solid fa-droplet"></i>
+        </div>
+        <h3>Pemodelan DAS & Hidrologi</h3>
+        <p>
+          Analisis kesesuaian lahan dan evaluasi kinerja hidrologi DAS guna
+          mendukung strategi konservasi tanah dan air.
+        </p>
+      </div>
+
+      <div class="card reveal-init">
+        <div class="card-icon">
+          <i class="fa-brands fa-python"></i>
+        </div>
+        <h3>Otomasi Spasial (Python)</h3>
+        <p>
+          Menyederhanakan alur kerja data keruangan yang rumit menjadi skrip
+          otomatis untuk pemrosesan yang cepat dan terstruktur.
+        </p>
+      </div>
+
+      <div class="card reveal-init">
+        <div class="card-icon">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <h3>Pengembangan WebGIS</h3>
+        <p>
+          Mentransformasi data geospasial menjadi platform peta interaktif,
+          aplikasi <b>fullstack</b> (NodeJS/JS), dan dasbor analitik yang
+          intuitif.
+        </p>
+      </div>
+
+      <div class="card reveal-init">
+        <div class="card-icon">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <h3>AI & Machine Learning</h3>
+        <p>
+          Menerapkan algoritma <b>Machine Learning</b> untuk klasifikasi tutupan
+          lahan otomatis dan pemodelan prediktif lingkungan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal-init" style="background-color: var(--bg-light)">
+  <div class="container">
+    <div class="section-header reveal-init">
+      <h2 class="section-title">Jejak Profesional & Akademis</h2>
+      <p class="section-subtitle">
+        Pondasi keilmuan dan pengalaman praktis yang membentuk kapasitas
+        analitik saya saat ini.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div
+        class="card reveal-init"
+        style="border-left: 4px solid var(--primary); transition-delay: 0.1s"
+      >
+        <div class="card-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 style="margin-bottom: 15px">Edukasi Mumpuni</h3>
+        <p>
+          Meraih gelar Magister Sains (M.Si) Ilmu Tanah dari
+          <strong>Institut Pertanian Bogor</strong> dan Sarjana Agroteknologi
+          dari <strong>Universitas Hasanuddin</strong> sebagai Lulusan Terbaik.
+        </p>
+      </div>
+
+      <div
+        class="card reveal-init"
+        style="border-left: 4px solid var(--accent); transition-delay: 0.2s"
+      >
+        <div class="card-icon">
+          <i class="fa-solid fa-book-journal-whills"></i>
+        </div>
+        <h3 style="margin-bottom: 15px">Riset & Publikasi</h3>
+        <p>
+          Memvalidasi temuan akademis melalui dua publikasi jurnal terakreditasi
+          <strong>Sinta 2</strong> yang berfokus pada pemodelan hidrograf aliran
+          sungai dan evaluasi algoritma Machine Learning.
+        </p>
+      </div>
+
+      <div
+        class="card reveal-init"
+        style="border-left: 4px solid #2c3e50; transition-delay: 0.3s"
+      >
+        <div class="card-icon">
+          <i class="fa-solid fa-briefcase"></i>
+        </div>
+        <h3 style="margin-bottom: 15px">Pengalaman Praktis</h3>
+        <p>
+          Berperan aktif sebagai Tenaga Support di
+          <strong>Meta Information Technology</strong>
+          untuk menganalisis kerentanan lingkungan BNPB dan kerentanan perubahan
+          iklim SIDIK KLH.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta reveal-init">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Siap Memberikan Dampak Nyata</h2>
+      <p>
+        Mari diskusikan bagaimana kombinasi keahlian analisis lingkungan dan
+        pengembangan WebGIS saya dapat berkontribusi secara langsung pada target
+        organisasi Anda.
+      </p>
+      <a href="sumber-konten/kontak/kontak.html" class="nav-link-ajax btn-dark">
+        Hubungi Saya
+      </a>
+    </div>
+  </div>
+</section>
