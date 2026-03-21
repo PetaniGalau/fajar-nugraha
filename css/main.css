@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LONTARA TECH — MAIN / HOMEPAGE STYLES
+   FAJAR NUGRAHA — MAIN / HOMEPAGE STYLES
    Lokasi: css/main.css
    Fungsi: Gaya khusus untuk Hero Section, WebGIS Container, dan CTA
    ========================================================================== */
@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-/* Pola Grid Spasial di Background Hero (Identitas Intelejen Lahan) */
+/* Pola Grid Spasial di Background Hero (Identitas Analisis Spasial) */
 .hero::before {
   content: "";
   position: absolute;
@@ -92,7 +92,7 @@ body.dark-theme .hero h1 {
 }
 
 body.dark-theme .section-title {
-  color: var(--accent); /* Judul seksi berwarna teal di mode gelap */
+  color: var(--accent); /* Judul aksen di mode gelap */
 }
 
 .section-subtitle {
@@ -145,7 +145,7 @@ body.dark-theme .section-title {
 /* --- 4. CALL TO ACTION (CTA) SECTION --- */
 .cta {
   padding: 100px 0;
-  background-color: var(--primary); /* Latar Hijau Khas Lontara */
+  background-color: var(--primary); /* Latar Utama */
   color: white;
   text-align: center;
   position: relative;
@@ -162,12 +162,12 @@ body.dark-theme .section-title {
   background:
     radial-gradient(
       circle at 10% 20%,
-      rgba(0, 184, 169, 0.25) 0%,
+      rgba(255, 255, 255, 0.15) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 90% 80%,
-      rgba(0, 184, 169, 0.15) 0%,
+      rgba(255, 255, 255, 0.1) 0%,
       transparent 50%
     );
   pointer-events: none;
