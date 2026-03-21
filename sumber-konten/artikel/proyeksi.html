@@ -1,146 +1,29 @@
-<style>
-  /* Styling Artikel untuk Keterbacaan Tinggi */
-  .article-body {
-    font-family: "Lora", serif;
-    font-size: 1.15rem;
-    line-height: 1.9;
-    color: var(--text-main);
-    max-width: 760px;
-    margin: 0 auto;
-  }
-  .article-body h2 {
-    font-family: "Manrope", sans-serif;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
-  }
-  .article-body h3 {
-    font-family: "Manrope", sans-serif;
-    margin-top: 1.5rem;
-    color: var(--text-main);
-  }
-  .article-body p {
-    margin-bottom: 1.5rem;
-  }
-
-  /* Box Ilustrasi & Highlight */
-  .highlight-box {
-    background: rgba(0, 184, 169, 0.05);
-    border-left: 4px solid var(--accent);
-    padding: 25px;
-    border-radius: 8px;
-    margin: 30px 0;
-    font-style: italic;
-    color: var(--text-main);
-  }
-
-  .gis-illustration {
-    background: var(--bg-light);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 25px;
-    margin: 40px 0;
-    text-align: center;
-  }
-
-  .illus-label {
-    font-family: "Manrope", sans-serif;
-    font-weight: 800;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    display: block;
-    color: var(--primary);
-  }
-
-  /* Animasi SVG */
-  .orange-peel-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .sphere-view,
-  .flat-view {
-    background: var(--bg-main);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 15px;
-    width: 280px;
-  }
-
-  @keyframes stretchPeel {
-    0%,
-    100% {
-      d: path("M30,50 Q50,20 70,50 T110,50");
-    }
-    50% {
-      d: path("M10,50 Q50,10 90,50 T170,50");
-    }
-  }
-  .animate-stretch {
-    animation: stretchPeel 4s infinite ease-in-out;
-    stroke: var(--accent);
-  }
-
-  /* Grid Tipe Proyeksi */
-  .projection-types-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-  }
-  .proj-card {
-    background: var(--bg-main);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-  }
-
-  /* Tabel Perbandingan */
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
-    font-family: "Manrope", sans-serif;
-    font-size: 0.9rem;
-  }
-  .comparison-table th {
-    background: var(--primary);
-    color: white;
-    padding: 12px;
-    text-align: left;
-  }
-  .comparison-table td {
-    border: 1px solid var(--border);
-    padding: 12px;
-    color: var(--text-main);
-  }
-</style>
-
 <section
-  class="hero"
-  style="min-height: 45vh; padding-bottom: 60px; background: var(--bg-light)"
+  class="section"
+  style="
+    padding: 120px 0 60px;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border);
+  "
 >
-  <div class="container hero-content">
+  <div class="container" style="max-width: 850px">
     <div style="margin-bottom: 30px">
       <a
         href="sumber-konten/artikel/artikel.html"
         class="nav-link-ajax btn-secondary"
         style="
+          border-radius: 50px;
+          padding: 8px 20px;
+          font-size: 0.85rem;
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          padding: 8px 20px;
-          border-radius: 30px;
-          font-size: 0.85rem;
         "
       >
-        <i class="fa-solid fa-arrow-left"></i> Kembali ke Artikel
+        <i class="fa-solid fa-arrow-left"></i> Kembali ke Katalog Artikel
       </a>
     </div>
+
     <span
       class="reveal-init"
       style="
@@ -155,26 +38,65 @@
     >
       Geodesi & Kartografi
     </span>
-    <h1 class="reveal-init" style="margin-bottom: 20px">
+
+    <h1
+      class="reveal-init"
+      style="
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        line-height: 1.2;
+        margin-bottom: 25px;
+        font-family: &quot;Outfit&quot;, sans-serif;
+      "
+    >
       Memahami Sistem Koordinat dan Proyeksi Peta
     </h1>
-    <p class="reveal-init" style="font-size: 1.1rem; color: var(--text-muted)">
-      Oleh <strong>Fajar Nugraha</strong> &bull; 15 Maret 2026 &bull; 6 Menit
-      Membaca
-    </p>
+
+    <div
+      class="reveal-init"
+      style="
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      "
+    >
+      <div
+        style="
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+          background: var(--border);
+        "
+      >
+        <img
+          src="aset/images/foto-pribadi.jpeg"
+          alt="Fajar Nugraha"
+          style="width: 100%; height: 100%; object-fit: cover"
+        />
+      </div>
+      <span
+        >Oleh <strong>Fajar Nugraha</strong> &bull; 15 Maret 2026 &bull; 6 Menit
+        Membaca</span
+      >
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <article class="article-body reveal-init">
-      <p>
+<section class="section" style="background-color: var(--bg-light)">
+  <div class="container" style="max-width: 800px">
+    <article
+      class="reveal-init"
+      style="font-size: 1.1rem; line-height: 1.9; color: var(--text-main)"
+    >
+      <p style="margin-bottom: 1.5rem">
         Pernahkah Anda berpikir bagaimana GPS di ponsel Anda bisa tahu persis
         lokasi Anda berdiri di atas bumi yang bulat ini, lalu menampilkannya
         secara akurat di atas layar peta yang datar?
       </p>
 
-      <p>
+      <p style="margin-bottom: 2rem">
         Itu bukan sihir, melainkan hasil kerja keras matematika yang disebut
         <strong>Sistem Koordinat</strong> dan <strong>Proyeksi Peta</strong>.
         Bagi praktisi GIS, memahami kedua konsep ini adalah harga mati. Jika
@@ -182,168 +104,427 @@
         menyesatkan secara fatal.
       </p>
 
-      <div class="highlight-box">
+      <div
+        style="
+          background: var(--accent-soft);
+          border-left: 5px solid var(--accent);
+          padding: 30px;
+          border-radius: 15px;
+          margin: 40px 0;
+          font-style: italic;
+          color: var(--text-main);
+          font-size: 1.15rem;
+        "
+      >
         "Masalah utama kartografi adalah: Bumi itu bulat (3D), sedangkan layar
         komputer itu datar (2D). Anda tidak bisa mengubah yang satu menjadi yang
         lain tanpa merusak salah satu aspeknya."
       </div>
 
-      <div class="gis-illustration">
-        <span class="illus-label"
-          >Visualisasi Masalah: Analogi Kulit Jeruk</span
+      <div
+        style="
+          background: var(--bg-main);
+          border: 1px solid var(--border);
+          border-radius: 25px;
+          padding: 40px;
+          margin: 40px 0;
+          text-align: center;
+        "
+      >
+        <span
+          style="
+            font-family: &quot;Outfit&quot;, sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            display: block;
+            color: var(--primary);
+          "
         >
-        <div class="orange-peel-container">
-          <div class="sphere-view">
-            <p style="font-size: 0.8rem; font-weight: 700; margin-bottom: 10px">
+          Visualisasi Masalah: Analogi Kulit Jeruk
+        </span>
+
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+          "
+        >
+          <div
+            style="
+              background: var(--bg-light);
+              border: 1px solid var(--border);
+              border-radius: 20px;
+              padding: 20px;
+              width: 250px;
+            "
+          >
+            <p
+              style="font-size: 0.85rem; font-weight: 700; margin-bottom: 15px"
+            >
               Bumi 3D (Bola)
             </p>
-            <svg viewBox="0 0 100 100" width="100" height="100">
+            <svg
+              viewBox="0 0 100 100"
+              width="120"
+              height="120"
+              style="margin: 0 auto"
+            >
               <circle
                 cx="50"
                 cy="50"
-                r="40"
+                r="45"
                 fill="var(--accent-soft)"
                 stroke="var(--accent)"
                 stroke-width="2"
               />
               <path
-                d="M50,10 A40,40 0 0,1 50,90"
+                d="M50,5 A45,45 0 0,1 50,95"
                 fill="none"
-                stroke="rgba(0,0,0,0.1)"
+                stroke="rgba(30, 58, 138, 0.1)"
+                stroke-width="1"
               />
-              <circle cx="50" cy="50" r="2" fill="var(--primary)" />
+              <path
+                d="M5,50 A45,45 0 0,1 95,50"
+                fill="none"
+                stroke="rgba(30, 58, 138, 0.1)"
+                stroke-width="1"
+              />
+              <circle cx="50" cy="50" r="3" fill="var(--primary)" />
             </svg>
           </div>
-          <div class="flat-view">
-            <p style="font-size: 0.8rem; font-weight: 700; margin-bottom: 10px">
+
+          <div
+            style="
+              background: var(--bg-light);
+              border: 1px solid var(--border);
+              border-radius: 20px;
+              padding: 20px;
+              width: 250px;
+            "
+          >
+            <p
+              style="font-size: 0.85rem; font-weight: 700; margin-bottom: 15px"
+            >
               Peta 2D (Datar)
             </p>
-            <svg viewBox="0 0 180 100" width="180" height="100">
-              <rect width="180" height="100" fill="var(--bg-light)" rx="5" />
+            <svg
+              viewBox="0 0 180 100"
+              width="180"
+              height="100"
+              style="margin: 0 auto"
+            >
+              <rect width="180" height="100" fill="var(--bg-main)" rx="10" />
               <path
                 d="M30,50 Q50,20 70,50 T110,50"
                 fill="none"
+                stroke="var(--accent)"
                 stroke-width="3"
-                class="animate-stretch"
+                stroke-linecap="round"
+                style="filter: drop-shadow(0 2px 4px var(--accent-glow))"
               />
-              <circle cx="70" cy="50" r="3" fill="var(--primary)" />
+              <circle cx="70" cy="50" r="4" fill="var(--primary)" />
             </svg>
           </div>
         </div>
+
         <p
-          style="font-size: 0.85rem; color: var(--text-muted); margin-top: 20px"
+          style="
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 25px;
+            line-height: 1.6;
+          "
         >
           Seperti mencoba meratakan kulit jeruk, Anda harus meregangkannya agar
           bisa datar sempurna. Proses "peregangan" inilah yang menimbulkan
-          <strong>distorsi</strong> pada peta.
+          <strong>distorsi</strong> pada aspek luas, jarak, atau bentuk.
         </p>
       </div>
 
-      <h2>1. Sistem Koordinat: Alamat di Muka Bumi</h2>
-      <p>
+      <h2
+        style="
+          font-family: &quot;Outfit&quot;, sans-serif;
+          color: var(--primary);
+          margin: 2.5rem 0 1rem;
+          font-size: 1.8rem;
+        "
+      >
+        1. Sistem Koordinat: Alamat di Muka Bumi
+      </h2>
+      <p style="margin-bottom: 1.5rem">
         Sistem koordinat adalah kerangka kerja untuk mendefinisikan lokasi unik
-        menggunakan angka. Ada dua jenis utama:
+        menggunakan angka. Ada dua jenis utama yang wajib Anda kuasai:
       </p>
 
-      <h3>Sistem Koordinat Geografis (GCS)</h3>
-      <p>
+      <h3
+        style="
+          font-family: &quot;Outfit&quot;, sans-serif;
+          color: var(--text-main);
+          margin-top: 1.5rem;
+          font-size: 1.3rem;
+        "
+      >
+        Sistem Koordinat Geografis (GCS)
+      </h3>
+      <p style="margin-bottom: 1.5rem">
         Sistem ini memperlakukan bumi sebagai bola dan menggunakan satuan
         <strong>sudut</strong> (Derajat, Menit, Detik). Contoh paling populer
-        adalah <strong>WGS 84</strong> yang digunakan oleh GPS global.
+        adalah <strong>WGS 84</strong> (EPSG:4326) yang digunakan oleh satelit
+        GPS global.
       </p>
 
       [Image of geographic coordinate system latitude and longitude on earth
       globe]
 
-      <h3>Sistem Koordinat Terproyeksi (PCS)</h3>
-      <p>
+      <h3
+        style="
+          font-family: &quot;Outfit&quot;, sans-serif;
+          color: var(--text-main);
+          margin-top: 1.5rem;
+          font-size: 1.3rem;
+        "
+      >
+        Sistem Koordinat Terproyeksi (PCS)
+      </h3>
+      <p style="margin-bottom: 1.5rem">
         Ini adalah koordinat yang sudah "didatarkan" ke bidang dua dimensi. Unit
-        satuannya adalah <strong>meter</strong>. Ini sangat krusial untuk
-        menghitung luas lahan atau jarak antar bangunan dengan akurat.
+        satuannya adalah <strong>meter</strong>. Ini sangat krusial jika Anda
+        perlu menghitung luas lahan atau jarak antar bangunan dengan akurat
+        secara metrik.
       </p>
 
-      <h2>2. Proyeksi Peta: Transformasi Dimensi</h2>
-      <p>
+      <h2
+        style="
+          font-family: &quot;Outfit&quot;, sans-serif;
+          color: var(--primary);
+          margin: 2.5rem 0 1rem;
+          font-size: 1.8rem;
+        "
+      >
+        2. Proyeksi Peta: Transformasi Dimensi
+      </h2>
+      <p style="margin-bottom: 1.5rem">
         Proyeksi peta adalah rumus matematis untuk mengubah koordinat bola
-        menjadi koordinat datar. Ada tiga metode utama yang sering digunakan
-        Lontara dalam proyeksi data:
+        menjadi koordinat datar. Berdasarkan permukaannya, ada tiga metode
+        utama:
       </p>
 
-      <div class="gis-illustration">
-        <span class="illus-label">3 Tipe Permukaan Proyeksi</span>
-        <div class="projection-types-grid">
-          <div class="proj-card">
-            <p style="font-weight: 700; font-size: 0.9rem">Silindris</p>
-            <p style="font-size: 0.75rem; color: var(--text-muted)">
-              Akurat di Khatulistiwa (Contoh: UTM).
-            </p>
-          </div>
-          <div class="proj-card">
-            <p style="font-weight: 700; font-size: 0.9rem">Konis</p>
-            <p style="font-size: 0.75rem; color: var(--text-muted)">
-              Bagus untuk wilayah lintang menengah.
-            </p>
-          </div>
-          <div class="proj-card">
-            <p style="font-weight: 700; font-size: 0.9rem">Planar</p>
-            <p style="font-size: 0.75rem; color: var(--text-muted)">
-              Terbaik untuk pemetaan area Kutub.
-            </p>
-          </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 20px;
+          margin: 30px 0;
+        "
+      >
+        <div
+          style="
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+          "
+        >
+          <i
+            class="fa-solid fa-scroll"
+            style="font-size: 1.5rem; color: var(--accent); margin-bottom: 15px"
+          ></i>
+          <p
+            style="
+              font-weight: 800;
+              font-family: &quot;Outfit&quot;, sans-serif;
+              margin-bottom: 8px;
+            "
+          >
+            Silindris
+          </p>
+          <p
+            style="
+              font-size: 0.85rem;
+              color: var(--text-muted);
+              margin-bottom: 0;
+            "
+          >
+            Akurat di wilayah Khatulistiwa. Contoh populer: Proyeksi Mercator
+            dan UTM.
+          </p>
+        </div>
+        <div
+          style="
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+          "
+        >
+          <i
+            class="fa-solid fa-ice-cream"
+            style="font-size: 1.5rem; color: var(--accent); margin-bottom: 15px"
+          ></i>
+          <p
+            style="
+              font-weight: 800;
+              font-family: &quot;Outfit&quot;, sans-serif;
+              margin-bottom: 8px;
+            "
+          >
+            Konis (Kerucut)
+          </p>
+          <p
+            style="
+              font-size: 0.85rem;
+              color: var(--text-muted);
+              margin-bottom: 0;
+            "
+          >
+            Sangat baik untuk memetakan wilayah di lintang menengah (seperti AS
+            atau Eropa).
+          </p>
+        </div>
+        <div
+          style="
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+          "
+        >
+          <i
+            class="fa-solid fa-circle-dot"
+            style="font-size: 1.5rem; color: var(--accent); margin-bottom: 15px"
+          ></i>
+          <p
+            style="
+              font-weight: 800;
+              font-family: &quot;Outfit&quot;, sans-serif;
+              margin-bottom: 8px;
+            "
+          >
+            Planar (Azimuthal)
+          </p>
+          <p
+            style="
+              font-size: 0.85rem;
+              color: var(--text-muted);
+              margin-bottom: 0;
+            "
+          >
+            Terbaik untuk pemetaan area Kutub utara maupun selatan secara
+            spesifik.
+          </p>
         </div>
       </div>
 
-      <h2>Standar EPSG yang Perlu Anda Tahu</h2>
-      <div style="overflow-x: auto">
-        <table class="comparison-table">
+      <h2
+        style="
+          font-family: &quot;Outfit&quot;, sans-serif;
+          color: var(--primary);
+          margin: 2.5rem 0 1rem;
+          font-size: 1.8rem;
+        "
+      >
+        Standar EPSG yang Perlu Diketahui
+      </h2>
+      <div style="overflow-x: auto; margin: 30px 0">
+        <table
+          style="
+            width: 100%;
+            border-collapse: collapse;
+            font-family: &quot;Inter&quot;, sans-serif;
+            font-size: 0.95rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+          "
+        >
           <thead>
-            <tr>
-              <th>Kode EPSG</th>
-              <th>Nama Sistem</th>
-              <th>Penggunaan</th>
+            <tr style="background: var(--primary); color: white">
+              <th style="padding: 15px; text-align: left">Kode EPSG</th>
+              <th style="padding: 15px; text-align: left">Nama Sistem</th>
+              <th style="padding: 15px; text-align: left">Penggunaan Utama</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>4326</strong></td>
-              <td>WGS 84 (GCS)</td>
-              <td>Standar GPS, data mentah satelit.</td>
+            <tr style="border-bottom: 1px solid var(--border)">
+              <td style="padding: 15px"><strong>4326</strong></td>
+              <td style="padding: 15px">WGS 84 (GCS)</td>
+              <td style="padding: 15px; color: var(--text-muted)">
+                Standar GPS global, data mentah citra satelit.
+              </td>
+            </tr>
+            <tr
+              style="
+                border-bottom: 1px solid var(--border);
+                background: var(--bg-main);
+              "
+            >
+              <td style="padding: 15px"><strong>3857</strong></td>
+              <td style="padding: 15px">Web Mercator</td>
+              <td style="padding: 15px; color: var(--text-muted)">
+                Visualisasi peta web (Google Maps, Leaflet, OSM).
+              </td>
             </tr>
             <tr>
-              <td><strong>3857</strong></td>
-              <td>Web Mercator</td>
-              <td>Tampilan web (Google Maps/Leaflet).</td>
-            </tr>
-            <tr>
-              <td><strong>32648 - 32654</strong></td>
-              <td>UTM Zone (Indonesia)</td>
-              <td>Analisis luas lahan & peta teknis RI.</td>
+              <td style="padding: 15px"><strong>32648 - 32654</strong></td>
+              <td style="padding: 15px">UTM Zone (Indonesia)</td>
+              <td style="padding: 15px; color: var(--text-muted)">
+                Analisis teknis luas lahan & standar pemetaan Nasional RI.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h2>Kesimpulan</h2>
-      <p>
-        Jangan asal melakukan <em>Overlay</em> data jika sistem koordinatnya
-        berbeda. Pastikan selalu melakukan <strong>Reprojection</strong> ke
-        sistem yang sama agar data spasial Anda bertumpuk dengan presisi tinggi.
+      <h2
+        style="
+          font-family: &quot;Outfit&quot;, sans-serif;
+          color: var(--primary);
+          margin: 2.5rem 0 1rem;
+          font-size: 1.8rem;
+        "
+      >
+        Kesimpulan
+      </h2>
+      <p style="margin-bottom: 1.5rem">
+        Jangan asal melakukan tumpang susun (<i>Overlay</i>) data jika sistem
+        koordinatnya berbeda. Dalam pekerjaan saya, saya selalu memastikan untuk
+        melakukan <strong>Reprojection</strong> ke sistem yang seragam sebelum
+        melakukan analisis, guna menjamin presisi spasial yang tinggi pada
+        output akhir.
       </p>
     </article>
   </div>
 </section>
 
-<section class="cta reveal-init">
+<section class="cta reveal-init" style="border-radius: 40px; margin: 4rem 2rem">
   <div class="container">
-    <div class="cta-content">
-      <h2>Siap Mengolah Data Spasial Anda?</h2>
-      <p>
-        Tim Lontara siap membantu Anda melakukan ekstraksi dan analisis data
-        satelit untuk kebutuhan industri.
+    <div
+      class="cta-content"
+      style="text-align: center; max-width: 700px; margin: 0 auto"
+    >
+      <h2 style="font-family: &quot;Outfit&quot;, sans-serif">
+        Butuh Akurasi Spasial Tinggi?
+      </h2>
+      <p style="margin-bottom: 2rem">
+        Saya siap membantu Anda dalam penanganan data geodesi, transformasi
+        koordinat, hingga pemetaan teknis yang presisi untuk berbagai kebutuhan
+        industri.
       </p>
-      <a href="sumber-konten/kontak/kontak.html" class="nav-link-ajax btn-dark"
-        >Hubungi Spesialis Kami</a
+      <a
+        href="sumber-konten/kontak/kontak.html"
+        class="nav-link-ajax btn-dark"
+        style="border-radius: 50px; padding: 1rem 2.5rem; font-size: 1rem"
       >
+        Konsultasikan Proyek Pemetaan Anda
+      </a>
     </div>
   </div>
 </section>
