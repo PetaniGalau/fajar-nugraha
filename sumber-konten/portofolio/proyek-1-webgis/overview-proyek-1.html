@@ -1,230 +1,248 @@
-<style>
-  /* --- Local Styles for Project Showcase --- */
-  .hero-product {
-    padding: 100px 0 60px;
+<section
+  class="section"
+  style="
+    padding: 120px 0 60px;
     background: linear-gradient(to bottom, var(--bg-light), var(--bg-main));
     text-align: center;
     border-bottom: 1px solid var(--border);
-  }
-
-  .breadcrumb-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #123b3a; /* Lontara Primary */
-    color: white !important;
-    padding: 10px 24px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    margin-bottom: 35px;
-    text-decoration: none;
-    transition: 0.3s ease;
-    font-weight: 700;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .breadcrumb-back:hover {
-    background-color: var(--accent);
-    transform: translateY(-2px);
-  }
-
-  .product-badge {
-    display: inline-block;
-    background: rgba(0, 184, 169, 0.1);
-    color: var(--accent);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
-
-  .webgis-container {
-    width: 100%;
-    height: 650px;
-    border-radius: 24px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-lg);
-    background: #1e1e2f;
-    margin: 40px 0;
-  }
-
-  .webgis-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .feature-item {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    font-weight: 600;
-    color: var(--text-main);
-  }
-
-  .feature-item i {
-    color: var(--accent);
-    font-size: 1.2rem;
-  }
-</style>
-
-<section class="hero-product">
+  "
+>
   <div class="container">
     <a
       href="sumber-konten/portofolio/portofolio.html"
-      class="nav-link-ajax breadcrumb-back"
+      class="nav-link-ajax btn-primary"
+      style="
+        border-radius: 50px;
+        padding: 10px 25px;
+        font-size: 0.85rem;
+        margin-bottom: 35px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      "
     >
       <i class="fa-solid fa-arrow-left"></i> Kembali ke Portofolio
     </a>
     <br />
-    <span class="product-badge">Flagship Platform</span>
+    <span
+      style="
+        display: inline-block;
+        background: var(--accent-soft);
+        color: var(--accent);
+        padding: 6px 18px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+      "
+    >
+      Featured Platform
+    </span>
+
     <h1
       class="reveal-init"
       style="
-        font-size: clamp(2rem, 5vw, 3rem);
-        color: #123b3a;
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        color: var(--primary);
         margin-bottom: 24px;
         font-weight: 800;
       "
     >
       Dashboard WebGIS Interaktif
     </h1>
+
     <p
       class="reveal-init"
       style="
         font-size: 1.15rem;
         color: var(--text-muted);
-        max-width: 800px;
+        max-width: 850px;
         margin: 0 auto 40px;
-        line-height: 1.6;
+        line-height: 1.8;
       "
     >
-      Platform WebGIS interaktif yang dirancang untuk pemantauan spasial
-      real-time, pelaporan otomatis, dan pengambilan keputusan berbasis data
-      untuk pengelolaan wilayah DAS yang berkelanjutan.
+      Platform pemetaan digital yang saya bangun untuk memvisualisasikan
+      dinamika wilayah secara <i>real-time</i>. Sistem ini mengintegrasikan
+      dataset spasial kompleks ke dalam antarmuka web yang responsif guna
+      mendukung pengambilan keputusan berbasis data ekologis.
     </p>
+
     <div
       class="reveal-init"
       style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap"
     >
       <a
-        href="sumber-konten/kontak/kontak.html"
-        class="nav-link-ajax btn-primary"
-        >Request Demo</a
+        href="#live-preview"
+        class="btn-primary"
+        style="border-radius: 50px; padding: 12px 30px"
+        >Coba Demo Interaktif</a
       >
-      <a href="#features" class="btn-secondary">Jelajahi Fitur</a>
-    </div>
-  </div>
-</section>
-
-<section id="features" class="section">
-  <div class="container">
-    <h2 class="section-title reveal-init">Fitur Utama</h2>
-    <p class="section-subtitle reveal-init">
-      Segala yang Anda butuhkan untuk memantau kinerja DAS dalam satu antarmuka
-      terstruktur.
-    </p>
-
-    <div class="grid-3">
-      <div class="card reveal-init">
-        <i
-          class="fa-solid fa-earth-asia"
-          style="font-size: 2rem; color: var(--accent); margin-bottom: 20px"
-        ></i>
-        <h3>WebGIS Interaktif</h3>
-        <p>
-          Visualisasikan dataset raster (tutupan lahan) dan vektor (geologi)
-          dengan performa rendering tinggi langsung di browser.
-        </p>
-      </div>
-      <div class="card reveal-init">
-        <i
-          class="fa-solid fa-chart-line"
-          style="font-size: 2rem; color: var(--accent); margin-bottom: 20px"
-        ></i>
-        <h3>Analitik Dinamis</h3>
-        <p>
-          Query spasial dan pelaporan statistik instan untuk poligon wilayah
-          Tanralili yang dipilih secara real-time.
-        </p>
-      </div>
-      <div class="card reveal-init">
-        <i
-          class="fa-solid fa-file-contract"
-          style="font-size: 2rem; color: var(--accent); margin-bottom: 20px"
-        ></i>
-        <h3>Pelaporan Otomatis</h3>
-        <p>
-          Hasilkan laporan pemantauan lingkungan komprehensif melalui ekstraksi
-          data spasial yang terotomatisasi.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background-color: var(--bg-light)">
-  <div class="container">
-    <h2 class="section-title reveal-init">Radar Intelijen Spasial</h2>
-    <p class="section-subtitle reveal-init">
-      Live Preview: Klik pada poligon untuk menganalisis atribut tutupan lahan
-      (LULC 2024) dan data geologi regional.
-    </p>
-
-    <div class="webgis-container reveal-init">
-      <iframe
-        src="sumber-konten/portofolio/proyek-1-webgis/app.html"
-        title="WebGIS Sub DAS Tanralili"
-        class="webgis-iframe"
-        loading="lazy"
-      ></iframe>
+      <a
+        href="#features"
+        class="btn-secondary"
+        style="border-radius: 50px; padding: 12px 30px"
+        >Detail Teknologi</a
+      >
     </div>
   </div>
 </section>
 
 <section
-  class="section section-cta-green"
-  style="
-    background-color: #123b3a !important;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-  "
+  id="features"
+  class="section"
+  style="background-color: var(--bg-light)"
 >
   <div class="container">
-    <h2 class="reveal-init" style="color: white; margin-bottom: 20px">
-      Siap Menerapkan Intelijen Spasial?
-    </h2>
-    <p class="reveal-init" style="margin-bottom: 40px; opacity: 0.9">
-      Integrasikan platform monitoring DAS ini ke dalam alur kerja organisasi
-      Anda untuk efisiensi pengambilan keputusan yang lebih tinggi.
-    </p>
-    <div class="reveal-init">
-      <a
-        href="sumber-konten/kontak/kontak.html"
-        class="nav-link-ajax btn-cta-white"
+    <div class="section-header reveal-init">
+      <h2 class="section-title">Kapabilitas Sistem</h2>
+      <p class="section-subtitle">
+        Arsitektur WebGIS yang mengutamakan performa rendering dan akurasi data
+        spasial.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div
+        class="card reveal-init"
+        style="text-align: center; padding: 2.5rem 2rem; border-radius: 25px"
+      >
+        <div class="card-icon" style="margin: 0 auto 20px; border-radius: 50%">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <h3>Multi-Layer Visualization</h3>
+        <p style="font-size: 0.95rem">
+          Visualisasi <i>seamless</i> untuk dataset raster tutupan lahan (LULC
+          2024) dan vektor geologi regional dalam satu kanvas peta.
+        </p>
+      </div>
+
+      <div
+        class="card reveal-init"
         style="
-          background: white;
-          color: #123b3a;
-          padding: 16px 40px;
-          border-radius: 8px;
-          font-weight: 800;
-          text-decoration: none;
+          text-align: center;
+          padding: 2.5rem 2rem;
+          border-radius: 25px;
+          transition-delay: 0.1s;
         "
       >
-        Jadwalkan Konsultasi Sekarang
+        <div class="card-icon" style="margin: 0 auto 20px; border-radius: 50%">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <h3>Spatial Query Engine</h3>
+        <p style="font-size: 0.95rem">
+          Fitur interaktif untuk mengekstraksi atribut data secara instan hanya
+          dengan melakukan klik pada poligon wilayah tertentu.
+        </p>
+      </div>
+
+      <div
+        class="card reveal-init"
+        style="
+          text-align: center;
+          padding: 2.5rem 2rem;
+          border-radius: 25px;
+          transition-delay: 0.2s;
+        "
+      >
+        <div class="card-icon" style="margin: 0 auto 20px; border-radius: 50%">
+          <i class="fa-solid fa-code-branch"></i>
+        </div>
+        <h3>Modern Tech Stack</h3>
+        <p style="font-size: 0.95rem">
+          Dibangun menggunakan <b>Leaflet.js</b> untuk <i>frontend</i> dan
+          optimasi GeoJSON/TopoJSON untuk kecepatan pemuatan data.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  id="live-preview"
+  class="section"
+  style="background-color: var(--bg-main); border-top: 1px solid var(--border)"
+>
+  <div class="container">
+    <div class="section-header reveal-init">
+      <span
+        style="
+          color: var(--accent);
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 0.85rem;
+          display: block;
+          margin-bottom: 10px;
+        "
+        >Radar Intelijen Spasial</span
+      >
+      <h2 class="section-title">Eksplorasi Langsung</h2>
+      <p class="section-subtitle">
+        Gunakan panel kontrol di bawah ini untuk menganalisis Sub DAS Tanralili.
+        Anda dapat mengganti basemap dan memeriksa informasi geologi secara
+        detail.
+      </p>
+    </div>
+
+    <div
+      class="reveal-init"
+      style="
+        width: 100%;
+        height: clamp(500px, 75vh, 700px);
+        border-radius: 35px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+        background: #0f172a;
+      "
+    >
+      <iframe
+        src="sumber-konten/portofolio/proyek-1-webgis/app.html"
+        title="WebGIS Sub DAS Tanralili"
+        style="width: 100%; height: 100%; border: none"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div
+      style="
+        margin-top: 25px;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        font-weight: 600;
+      "
+    >
+      <i
+        class="fa-solid fa-circle-info text-accent"
+        style="margin-right: 8px"
+      ></i>
+      Klik pada area berwarna di peta untuk memunculkan ringkasan data di sisi
+      kiri.
+    </div>
+  </div>
+</section>
+
+<section class="cta reveal-init" style="border-radius: 40px; margin: 4rem 2rem">
+  <div class="container">
+    <div class="cta-content">
+      <h2 style="font-family: &quot;Outfit&quot;, sans-serif">
+        Siap Mengembangkan Solusi Spasial?
+      </h2>
+      <p style="margin-bottom: 30px">
+        Jika instansi atau proyek Anda membutuhkan platform pemantauan
+        lingkungan berbasis peta seperti ini, saya siap membantu merancangnya
+        dari nol.
+      </p>
+      <a
+        href="sumber-konten/kontak/kontak.html"
+        class="nav-link-ajax btn-dark"
+        style="border-radius: 50px; padding: 1rem 2.5rem"
+      >
+        Mari Konsultasikan Kebutuhan Anda
       </a>
     </div>
   </div>
