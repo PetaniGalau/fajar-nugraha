@@ -1,389 +1,120 @@
-<section
-  class="section"
-  style="
-    padding: 120px 0 60px;
-    background-color: var(--bg-main);
-    border-bottom: 1px solid var(--border);
-  "
->
-  <div class="container" style="max-width: 850px">
-    <div style="margin-bottom: 30px">
-      <a
-        href="sumber-konten/artikel/artikel.html"
-        class="nav-link-ajax btn-secondary"
-        style="
-          border-radius: 50px;
-          padding: 8px 20px;
-          font-size: 0.85rem;
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-        "
-      >
-        <i class="fa-solid fa-arrow-left"></i> Kembali ke Katalog Artikel
-      </a>
-    </div>
-
-    <span
-      class="reveal-init"
-      style="
-        color: var(--accent);
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-        display: block;
-        margin-bottom: 15px;
-      "
-    >
-      Metodologi Spasial
-    </span>
-
-    <h1
-      class="reveal-init"
-      style="
-        font-size: clamp(2.2rem, 5vw, 3.2rem);
-        line-height: 1.2;
-        margin-bottom: 25px;
-        font-family: &quot;Outfit&quot;, sans-serif;
-      "
-    >
-      Workflow GIS: Dari Data Mentah hingga Produk Peta
-    </h1>
-
-    <div
-      class="reveal-init"
-      style="
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        color: var(--text-muted);
-        font-size: 0.95rem;
-      "
-    >
-      <div
-        style="
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          overflow: hidden;
-          background: var(--border);
-        "
-      >
-        <img
-          src="aset/images/foto-pribadi.jpeg"
-          alt="Fajar Nugraha"
-          style="width: 100%; height: 100%; object-fit: cover"
-        />
-      </div>
-      <span
-        >Oleh <strong>Fajar Nugraha</strong> &bull; 16 Maret 2026 &bull; 6 Menit
-        Membaca</span
-      >
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background-color: var(--bg-light)">
-  <div class="container" style="max-width: 800px">
-    <article
-      class="reveal-init"
-      style="font-size: 1.1rem; line-height: 1.9; color: var(--text-main)"
-    >
-      <p style="margin-bottom: 1.5rem">
+<section class="page-hero"><div class="container"><span class="eyebrow">Artikel</span><h1>Workflow GIS: Dari Data Mentah hingga Produk Peta</h1><p>Oleh Fajar Nugraha · Catatan GIS</p></div></section><div class="container"><article class="article-body">
+      <p>
         Seringkali, pemula menganggap GIS hanyalah tentang membuka perangkat
         lunak seperti QGIS atau ArcGIS, memasukkan data, dan menekan tombol
         untuk menghasilkan peta. Namun dalam dunia profesional, pembuatan peta
         hanyalah puncak gunung es dari proses panjang yang terjadi di belakang
         layar.
       </p>
-      <p style="margin-bottom: 2rem">
+      <p>
         GIS yang sebenarnya adalah sebuah
         <strong>alur kerja (workflow)</strong> yang sistematis. Tanpa alur yang
         benar, data yang Anda miliki hanya akan menjadi tumpukan angka tak
-        bermakna, atau bahkan menghasilkan peta yang menyesatkan (<i
-          >garbage in, garbage out</i
-        >).
+        bermakna, atau bahkan menghasilkan peta yang menyesatkan (<i>garbage in, garbage out</i>).
       </p>
 
-      <div
-        style="
-          background: var(--bg-main);
-          border: 1px solid var(--border);
-          border-radius: 25px;
-          padding: 40px;
-          margin: 40px 0;
-          text-align: center;
-        "
-      >
-        <span
-          style="
-            font-family: &quot;Outfit&quot;, sans-serif;
-            font-weight: 800;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 30px;
-            display: block;
-            color: var(--primary);
-          "
-        >
+      <div>
+        <span>
           Diagram Alur Kerja Standar: 5 Tahap Kunci
         </span>
 
-        <svg
-          viewBox="0 0 780 100"
-          style="width: 100%; height: auto; max-width: 700px; margin: 0 auto"
-        >
+        <svg viewbox="0 0 780 100">
           <defs>
-            <marker
-              id="arrowhead"
-              markerWidth="10"
-              markerHeight="7"
-              refX="0"
-              refY="3.5"
-              orient="auto"
-            >
-              <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-muted)" />
+            <marker id="arrowhead" markerwidth="10" markerheight="7" refx="0" refy="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-muted)"></polygon>
             </marker>
           </defs>
 
-          <line
-            x1="135"
-            y1="50"
-            x2="155"
-            y2="50"
-            stroke="var(--border)"
-            stroke-width="2"
-            marker-end="url(#arrowhead)"
-          />
-          <line
-            x1="295"
-            y1="50"
-            x2="315"
-            y2="50"
-            stroke="var(--border)"
-            stroke-width="2"
-            marker-end="url(#arrowhead)"
-          />
-          <line
-            x1="455"
-            y1="50"
-            x2="475"
-            y2="50"
-            stroke="var(--border)"
-            stroke-width="2"
-            marker-end="url(#arrowhead)"
-          />
-          <line
-            x1="615"
-            y1="50"
-            x2="635"
-            y2="50"
-            stroke="var(--border)"
-            stroke-width="2"
-            marker-end="url(#arrowhead)"
-          />
+          <line x1="135" y1="50" x2="155" y2="50" stroke="var(--border)" stroke-width="2" marker-end="url(#arrowhead)"></line>
+          <line x1="295" y1="50" x2="315" y2="50" stroke="var(--border)" stroke-width="2" marker-end="url(#arrowhead)"></line>
+          <line x1="455" y1="50" x2="475" y2="50" stroke="var(--border)" stroke-width="2" marker-end="url(#arrowhead)"></line>
+          <line x1="615" y1="50" x2="635" y2="50" stroke="var(--border)" stroke-width="2" marker-end="url(#arrowhead)"></line>
 
           <g transform="translate(10,25)">
-            <rect
-              width="120"
-              height="50"
-              rx="25"
-              fill="var(--bg-light)"
-              stroke="var(--primary)"
-              stroke-width="2"
-            />
-            <text
-              x="60"
-              y="30"
-              text-anchor="middle"
-              font-family="Outfit"
-              font-size="12"
-              font-weight="800"
-              fill="var(--primary)"
-            >
+            <rect width="120" height="50" rx="25" fill="var(--bg-light)" stroke="var(--primary)" stroke-width="2"></rect>
+            <text x="60" y="30" text-anchor="middle" font-family="Outfit" font-size="12" font-weight="800" fill="var(--primary)">
               1. INPUT
             </text>
           </g>
           <g transform="translate(170,25)">
-            <rect
-              width="120"
-              height="50"
-              rx="25"
-              fill="var(--bg-light)"
-              stroke="var(--accent)"
-              stroke-width="2"
-            />
-            <text
-              x="60"
-              y="30"
-              text-anchor="middle"
-              font-family="Outfit"
-              font-size="12"
-              font-weight="800"
-              fill="var(--accent)"
-            >
+            <rect width="120" height="50" rx="25" fill="var(--bg-light)" stroke="var(--accent)" stroke-width="2"></rect>
+            <text x="60" y="30" text-anchor="middle" font-family="Outfit" font-size="12" font-weight="800" fill="var(--accent)">
               2. KELOLA
             </text>
           </g>
           <g transform="translate(330,25)">
-            <rect
-              width="120"
-              height="50"
-              rx="25"
-              fill="var(--bg-light)"
-              stroke="var(--primary)"
-              stroke-width="2"
-            />
-            <text
-              x="60"
-              y="30"
-              text-anchor="middle"
-              font-family="Outfit"
-              font-size="12"
-              font-weight="800"
-              fill="var(--primary)"
-            >
+            <rect width="120" height="50" rx="25" fill="var(--bg-light)" stroke="var(--primary)" stroke-width="2"></rect>
+            <text x="60" y="30" text-anchor="middle" font-family="Outfit" font-size="12" font-weight="800" fill="var(--primary)">
               3. OLAH
             </text>
           </g>
           <g transform="translate(490,25)">
-            <rect
-              width="120"
-              height="50"
-              rx="25"
-              fill="var(--bg-light)"
-              stroke="var(--accent)"
-              stroke-width="2"
-            />
-            <text
-              x="60"
-              y="30"
-              text-anchor="middle"
-              font-family="Outfit"
-              font-size="12"
-              font-weight="800"
-              fill="var(--accent)"
-            >
+            <rect width="120" height="50" rx="25" fill="var(--bg-light)" stroke="var(--accent)" stroke-width="2"></rect>
+            <text x="60" y="30" text-anchor="middle" font-family="Outfit" font-size="12" font-weight="800" fill="var(--accent)">
               4. ANALISIS
             </text>
           </g>
           <g transform="translate(650,25)">
-            <rect
-              width="120"
-              height="50"
-              rx="25"
-              fill="var(--primary)"
-              stroke="var(--primary)"
-              stroke-width="2"
-            />
-            <text
-              x="60"
-              y="30"
-              text-anchor="middle"
-              font-family="Outfit"
-              font-size="12"
-              font-weight="800"
-              fill="white"
-            >
+            <rect width="120" height="50" rx="25" fill="var(--primary)" stroke="var(--primary)" stroke-width="2"></rect>
+            <text x="60" y="30" text-anchor="middle" font-family="Outfit" font-size="12" font-weight="800" fill="white">
               5. OUTPUT
             </text>
           </g>
         </svg>
 
-        <p
-          style="
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-top: 25px;
-            line-height: 1.6;
-            font-style: italic;
-          "
-        >
+        <p>
           Siklus ini bersifat iteratif—hasil analisis seringkali mengharuskan
           kita kembali ke tahap input untuk melengkapi data pendukung.
         </p>
       </div>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
-        1. Perencanaan & Definisi Masalah
+      <h2>
+        1. Perencanaan &amp; Definisi Masalah
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Alur kerja GIS selalu dimulai <strong>sebelum</strong> Anda menyentuh
         komputer. Anda butuh pertanyaan spasial yang spesifik. Sebagai contoh,
         dalam riset saya mengenai hidrologi:
-        <i
-          >"Di mana lokasi optimal untuk membangun embung resapan berdasarkan
-          karakteristik jenis tanah dan kelerengan?"</i
-        >
+        <i>"Di mana lokasi optimal untuk membangun embung resapan berdasarkan
+          karakteristik jenis tanah dan kelerengan?"</i>
       </p>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
-        2. Input & Akuisisi Data
+      <h2>
+        2. Input &amp; Akuisisi Data
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Tahap pengumpulan "bahan mentah" dari berbagai sumber. Berikut adalah
         jenis data yang biasa saya gunakan:
       </p>
 
-      <div style="overflow-x: auto; margin: 30px 0">
-        <table
-          style="
-            width: 100%;
-            border-collapse: collapse;
-            font-family: &quot;Inter&quot;, sans-serif;
-            font-size: 0.95rem;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-          "
-        >
+      <div>
+        <table>
           <thead>
-            <tr style="background: var(--primary); color: white">
-              <th style="padding: 15px; text-align: left">Sumber Data</th>
-              <th style="padding: 15px; text-align: left">Contoh Aset</th>
-              <th style="padding: 15px; text-align: left">Format Umum</th>
+            <tr>
+              <th>Sumber Data</th>
+              <th>Contoh Aset</th>
+              <th>Format Umum</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom: 1px solid var(--border)">
-              <td style="padding: 15px"><strong>Remote Sensing</strong></td>
-              <td style="padding: 15px">Sentinel, Landsat, Drone</td>
-              <td style="padding: 15px; color: var(--text-muted)">
+            <tr>
+              <td><strong>Remote Sensing</strong></td>
+              <td>Sentinel, Landsat, Drone</td>
+              <td>
                 GeoTIFF, NetCDF
               </td>
             </tr>
-            <tr
-              style="
-                border-bottom: 1px solid var(--border);
-                background: var(--bg-main);
-              "
-            >
-              <td style="padding: 15px"><strong>Survei Terestrial</strong></td>
-              <td style="padding: 15px">GPS Tracker, Survei Lahan</td>
-              <td style="padding: 15px; color: var(--text-muted)">
+            <tr>
+              <td><strong>Survei Terestrial</strong></td>
+              <td>GPS Tracker, Survei Lahan</td>
+              <td>
                 CSV, GPX, SHP
               </td>
             </tr>
             <tr>
-              <td style="padding: 15px"><strong>Data Institusi</strong></td>
-              <td style="padding: 15px">Batas Desa, Jaringan Jalan</td>
-              <td style="padding: 15px; color: var(--text-muted)">
+              <td><strong>Data Institusi</strong></td>
+              <td>Batas Desa, Jaringan Jalan</td>
+              <td>
                 GeoPackage, KML
               </td>
             </tr>
@@ -391,34 +122,20 @@
         </table>
       </div>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
+      <h2>
         3. Pra-Pengolahan (Data Cleaning)
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Ini adalah tahap yang paling memakan waktu (sekitar 60-70% durasi
         proyek). Kegiatannya meliputi perbaikan geometri (menghapus
         <i>gap</i> atau <i>overlap</i>), penyelarasan sistem koordinat
         (<i>reprojection</i>), dan normalisasi tabel atribut data.
       </p>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
-        4. Analisis & Pemodelan
+      <h2>
+        4. Analisis &amp; Pemodelan
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Di sinilah kita menggunakan algoritma untuk menjawab pertanyaan di tahap
         pertama. Saya sering menerapkan teknik
         <strong>Weighted Overlay</strong> untuk analisis kesesuaian lahan dan
@@ -426,64 +143,21 @@
         permukaan.
       </p>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
-        5. Visualisasi & Diseminasi
+      <h2>
+        5. Visualisasi &amp; Diseminasi
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Tahap akhir adalah mengemas hasil analisis menjadi produk yang
         komunikatif. Baik itu berupa peta cetak standar kartografi, maupun
         platform **WebGIS** yang memungkinkan <i>stakeholder</i> berinteraksi
         langsung dengan data tersebut secara digital.
       </p>
 
-      <div
-        style="
-          background: var(--accent-soft);
-          border-left: 5px solid var(--accent);
-          padding: 30px;
-          border-radius: 15px;
-          margin: 40px 0;
-          color: var(--text-main);
-          font-size: 1.05rem;
-        "
-      >
+      <div>
         <strong>Kesimpulan:</strong> Kualitas produk geospasial ditentukan oleh
         kedisiplinan Anda dalam mengikuti setiap tahapan alur kerja ini. Peta
         yang bagus bukan hanya yang indah dilihat, tapi yang akurat secara
         metodologis.
       </div>
     </article>
-  </div>
-</section>
-
-<section class="cta reveal-init" style="border-radius: 40px; margin: 4rem 2rem">
-  <div class="container">
-    <div
-      class="cta-content"
-      style="text-align: center; max-width: 700px; margin: 0 auto"
-    >
-      <h2 style="font-family: &quot;Outfit&quot;, sans-serif">
-        Butuh Implementasi Workflow GIS?
-      </h2>
-      <p style="margin-bottom: 2rem">
-        Saya dapat membantu Anda merancang alur pemrosesan data yang
-        terotomatisasi, efisien, dan siap digunakan untuk pengambilan keputusan
-        di organisasi Anda.
-      </p>
-      <a
-        href="sumber-konten/kontak/kontak.html"
-        class="nav-link-ajax btn-dark"
-        style="border-radius: 50px; padding: 1rem 2.5rem; font-size: 1rem"
-      >
-        Konsultasikan Proyek Strategis Anda
-      </a>
-    </div>
-  </div>
-</section>
+  <div class="button-row" style="margin:35px 0 60px"><a href="sumber-konten/artikel/artikel.html" class="nav-link-ajax btn-primary">Kembali ke artikel →</a></div></div>

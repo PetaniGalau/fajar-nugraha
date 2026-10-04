@@ -313,10 +313,10 @@ html {
   background-image: url("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/538/412");
 }
 .thumb.street {
-  background-image: url("https://a.tile.openstreetmap.org/10/538/412.png");
+  background-image: url("https://a.tile.openstreetmap.org/10/538/412.webp");
 }
 .thumb.light {
-  background-image: url("https://a.basemaps.cartocdn.com/light_all/10/538/412.png");
+  background-image: url("https://a.basemaps.cartocdn.com/light_all/10/538/412.webp");
 }
 .thumb.terrain {
   background-image: url("https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/5/17/13");

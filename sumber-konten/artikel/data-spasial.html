@@ -1,96 +1,5 @@
-<section
-  class="section"
-  style="
-    padding: 120px 0 60px;
-    background-color: var(--bg-main);
-    border-bottom: 1px solid var(--border);
-  "
->
-  <div class="container" style="max-width: 850px">
-    <div style="margin-bottom: 30px">
-      <a
-        href="sumber-konten/artikel/artikel.html"
-        class="nav-link-ajax btn-secondary"
-        style="
-          border-radius: 50px;
-          padding: 8px 20px;
-          font-size: 0.85rem;
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-        "
-      >
-        <i class="fa-solid fa-arrow-left"></i> Kembali ke Katalog Artikel
-      </a>
-    </div>
-
-    <span
-      class="reveal-init"
-      style="
-        color: var(--accent);
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-        display: block;
-        margin-bottom: 15px;
-      "
-    >
-      Fundamental GIS
-    </span>
-
-    <h1
-      class="reveal-init"
-      style="
-        font-size: clamp(2.2rem, 5vw, 3.2rem);
-        line-height: 1.2;
-        margin-bottom: 25px;
-        font-family: &quot;Outfit&quot;, sans-serif;
-      "
-    >
-      Mengenal Data Spasial: Vektor vs Raster
-    </h1>
-
-    <div
-      class="reveal-init"
-      style="
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        color: var(--text-muted);
-        font-size: 0.95rem;
-      "
-    >
-      <div
-        style="
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          overflow: hidden;
-          background: var(--border);
-        "
-      >
-        <img
-          src="aset/images/foto-pribadi.jpeg"
-          alt="Fajar Nugraha"
-          style="width: 100%; height: 100%; object-fit: cover"
-        />
-      </div>
-      <span
-        >Oleh <strong>Fajar Nugraha</strong> &bull; 14 Maret 2026 &bull; 5 Menit
-        Membaca</span
-      >
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background-color: var(--bg-light)">
-  <div class="container" style="max-width: 800px">
-    <article
-      class="reveal-init"
-      style="font-size: 1.1rem; line-height: 1.9; color: var(--text-main)"
-    >
-      <p style="margin-bottom: 1.5rem">
+<section class="page-hero"><div class="container"><span class="eyebrow">Artikel</span><h1>Mengenal Data Spasial: Vektor vs Raster</h1><p>Oleh Fajar Nugraha · Catatan GIS</p></div></section><div class="container"><article class="article-body">
+      <p>
         Dalam dunia Sistem Informasi Geografis (GIS), data bukan sekadar angka
         di atas tabel. Data tersebut memiliki "alamat" di permukaan bumi. Namun,
         tahukah Anda bahwa komputer melihat dunia kita melalui dua kacamata yang
@@ -98,139 +7,85 @@
         <strong>Raster</strong>.
       </p>
 
-      <p style="margin-bottom: 2rem">
+      <p>
         Memahami perbedaan keduanya adalah langkah pertama untuk menjadi seorang
         analis spasial yang andal. Mari kita bedah karakteristik unik dari
         masing-masing format data ini.
       </p>
 
-      <div style="margin: 40px 0; text-align: center">
-        <img
-          src="aset/img-artikel/vector-vs-rasterr.png"
-          alt="Perbandingan Data Vektor dan Raster"
-          style="
-            max-width: 100%;
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
-          "
-          onerror="
-            this.src = 'https://placehold.co/800x400?text=Vector+vs+Raster'
-          "
-        />
-        <span
-          style="
-            display: block;
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-style: italic;
-          "
-        >
+      <div>
+        <img src="aset/img-artikel/vector-vs-rasterr.webp" alt="Perbandingan Data Vektor dan Raster" loading="lazy" decoding="async">
+        <span>
           Visualisasi perbedaan representasi dunia nyata dalam format Vektor dan
           Raster.
         </span>
       </div>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
+      <h2>
         1. Data Vektor: Titik, Garis, dan Poligon
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Data vektor menggunakan koordinat matematis (X, Y) untuk menentukan
         lokasi. Bayangkan seperti menggambar di atas kertas menggunakan
         penggaris dan pensil. Data ini sangat efisien untuk merepresentasikan
         objek yang memiliki batas atau delimitasi yang jelas.
       </p>
-      <ul style="margin-bottom: 2rem; padding-left: 20px">
-        <li style="margin-bottom: 10px">
+      <ul>
+        <li>
           <strong>Titik (Point):</strong> Digunakan untuk lokasi tunggal seperti
           posisi menara telekomunikasi atau alamat rumah.
         </li>
-        <li style="margin-bottom: 10px">
+        <li>
           <strong>Garis (Line):</strong> Digunakan untuk objek memanjang seperti
           jaringan drainase sungai atau infrastruktur jalan raya.
         </li>
-        <li style="margin-bottom: 10px">
+        <li>
           <strong>Poligon (Area):</strong> Digunakan untuk wilayah tertutup
           seperti batas administrasi atau luasan penggunaan lahan.
         </li>
       </ul>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
+      <h2>
         2. Data Raster: Dunia dalam Grid Matriks
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Data raster melihat dunia sebagai kumpulan kotak-kotak kecil yang
         disebut <strong>Pixel</strong> (atau Cell). Setiap kotak memiliki nilai
         numerik yang mewakili fenomena tertentu. Contoh paling umum adalah citra
         satelit atau foto udara.
       </p>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Data format ini sangat ideal untuk memetakan fenomena yang sifatnya
         berkelanjutan (continuous) dan tidak memiliki batas yang kaku, seperti:
       </p>
-      <ul style="margin-bottom: 2rem; padding-left: 20px">
-        <li style="margin-bottom: 10px">Distribusi suhu permukaan wilayah.</li>
-        <li style="margin-bottom: 10px">
+      <ul>
+        <li>Distribusi suhu permukaan wilayah.</li>
+        <li>
           Model Elevasi Digital (DEM) untuk analisis kelerengan.
         </li>
-        <li style="margin-bottom: 10px">Intensitas curah hujan spasial.</li>
+        <li>Intensitas curah hujan spasial.</li>
       </ul>
 
-      <div
-        style="
-          background: var(--bg-main);
-          padding: 30px;
-          border-radius: 25px;
-          border-left: 6px solid var(--accent);
-          margin: 40px 0;
-        "
-      >
-        <h3
-          style="
-            margin-bottom: 15px;
-            color: var(--text-main);
-            font-family: &quot;Outfit&quot;, sans-serif;
-          "
-        >
+      <div>
+        <h3>
           Pilih Format yang Tepat
         </h3>
-        <p style="margin-bottom: 10px; font-size: 1rem">
+        <p>
           Gunakan <strong>Vektor</strong> jika fokus Anda adalah akurasi batas
           administratif dan pengelolaan tabel atribut yang detail (seperti
           database kepemilikan lahan).
         </p>
-        <p style="margin-bottom: 0; font-size: 1rem">
+        <p>
           Gunakan <strong>Raster</strong> jika Anda melakukan analisis pemodelan
           yang kompleks seperti klasifikasi tutupan lahan menggunakan
           <i>machine learning</i> atau analisis hidrologi.
         </p>
       </div>
 
-      <h2
-        style="
-          font-family: &quot;Outfit&quot;, sans-serif;
-          color: var(--primary);
-          margin: 2.5rem 0 1rem;
-          font-size: 1.8rem;
-        "
-      >
+      <h2>
         Kesimpulan
       </h2>
-      <p style="margin-bottom: 1.5rem">
+      <p>
         Dalam proyek-proyek analisis saya, integrasi keduanya adalah kunci. Saya
         sering memanfaatkan data <strong>Raster</strong> dari satelit Sentinel
         untuk mengekstraksi indeks kesehatan vegetasi, lalu mengonversinya
@@ -238,30 +93,4 @@
         yang presisi bagi pengambil kebijakan.
       </p>
     </article>
-  </div>
-</section>
-
-<section class="cta reveal-init" style="border-radius: 40px; margin: 4rem 2rem">
-  <div class="container">
-    <div
-      class="cta-content"
-      style="text-align: center; max-width: 700px; margin: 0 auto"
-    >
-      <h2 style="font-family: &quot;Outfit&quot;, sans-serif">
-        Butuh Analisis Data Spasial?
-      </h2>
-      <p style="margin-bottom: 2rem">
-        Saya siap membantu Anda melakukan ekstraksi data, pemodelan, hingga
-        pembangunan infrastruktur WebGIS untuk kebutuhan instansi atau riset
-        Anda.
-      </p>
-      <a
-        href="sumber-konten/kontak/kontak.html"
-        class="nav-link-ajax btn-dark"
-        style="border-radius: 50px; padding: 1rem 2.5rem; font-size: 1rem"
-      >
-        Mari Berdiskusi Secara Profesional
-      </a>
-    </div>
-  </div>
-</section>
+  <div class="button-row" style="margin:35px 0 60px"><a href="sumber-konten/artikel/artikel.html" class="nav-link-ajax btn-primary">Kembali ke artikel →</a></div></div>
